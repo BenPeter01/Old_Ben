@@ -1,0 +1,29 @@
+<body>
+<p>poste works!</p>
+<div>
+    <h2>Liste des Postes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Diplôme Requis</th>
+          <th>Date de Clôture</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let poste of postes">
+          <td>{{ poste.id }}</td>
+          <td>{{ poste.titre }}</td>
+          <td>{{ poste.description }}</td>
+          <td>{{ poste.diplomeRequis }}</td>
+          <td>{{ poste.dateCloture }}</td>
+          <td><button (click)="(poste)">Postuler</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+  
